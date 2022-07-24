@@ -10,6 +10,7 @@ export class AppController {
 
     @EventPattern('user_created')
     handleUserCreated(data: CreateUserEvent) {
+        console.log('data를 받았음!', data);
         this.appService.handleUserCreated(data);
     }
 }
